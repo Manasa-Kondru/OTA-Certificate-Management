@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SvgService } from './services/svg.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'OTA-Certificate-Management';
+  constructor(public svgService: SvgService) { }
+  ngOnInit(): void {
+    this.svgService.getIcons();
+  }
 }

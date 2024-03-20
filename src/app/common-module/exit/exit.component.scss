@@ -1,0 +1,31 @@
+@import '../../../styles.scss';
+// ::ng-deep .mat-dialog-container
+// {
+
+// }
+
+::ng-deep .mat-mdc-dialog-container
+{
+border-radius: 15px;
+// border: 0.5px solid var(--primary-color) !important;
+}
+.close {
+    background-color: #E6E6E6;
+    border-radius: 23px;
+    color: #252525;
+    font-size: 20px;
+    padding: 5px 30px;
+    border:none !important;
+    padding: 12px 25px;
+
+}
+
+.confirm {
+    background-color: var(--primary-color) !important;
+    border-radius: 23px;
+    font-size: 20px;
+    padding: 12px 25px;
+    color: #fff !important;
+    box-shadow: var(--box-shadow);
+    border: none;
+}

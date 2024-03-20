@@ -1,0 +1,39 @@
+<div class="my-5">
+  <p class="mb-5 fs-4 fw-bold">Email Verification</p>
+  <!-- <form>
+    <mat-form-field appearance="outline" class="w-50 mt-4">
+        <mat-label class="fontsize ">Verification Code</mat-label>
+        <input matInput formcontrol="verification_code" required>
+        <mat-error *ngIf="verification_code?.hasError('required')">
+            Verification Code is required
+          </mat-error>
+        <mat-hint align="end" class="forgotpwd fw-medium cursor pt-1">Resend verification code</mat-hint>
+    </mat-form-field>
+</form> -->
+  <form [formGroup]="loginCrendentials">
+    <label style="margin-right:40% ;" class="fs-5">Enter OTP: </label><br>
+    <mat-form-field appearance="outline" class="w-50 py-2">
+      <input matInput formControlName="otp" placeholder="Verification Code" maxlength="6"
+        (keypress)="numberOnly($event)">
+      <mat-error *ngIf="loginCrendentials.get('otp')?.hasError('required')">
+        Verification Code is required
+      </mat-error>
+      <mat-error
+        *ngIf="loginCrendentials.get('otp')?.hasError('minlength') && !loginCrendentials.get('otp')?.hasError('required')">
+        Please enter a valid code.
+      </mat-error>
+      <mat-hint align="end" class="forgotpwd fw-medium cursor pt-1">Resend verification code</mat-hint>
+
+    </mat-form-field>
+  </form>
+  <div class="d-flex justify-content-center fs-6 mt-4 mb-3">
+    <div class="w-75 text-center">A verification code has been sent to your registered E-mail ID.<br> Verify with the
+      OTP to login.</div>
+  </div>
+  <b class="text-center fs-6">4 attempts left</b>
+  <div class="d-flex justify-content-center my-4 cursor" (click)="routeTo()">
+    <div class="login  w-50 py-3 ">Verify</div>
+  </div>
+  <div class="text-center forgotpwd fw-medium cursor" (click)="backToLogin()">Return to login</div>
+
+</div>

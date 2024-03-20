@@ -1,0 +1,13 @@
+@import '../../../styles.scss';
+:host ::ng-deep .mat-icon-button.mat-button-disabled {
+    cursor: pointer !important;
+    opacity: 0.5 !important;
+}
+
+.table {
+    --bs-table-bg: transparent !important;
+    width: 96% !important;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-radius: 20px;
+  }

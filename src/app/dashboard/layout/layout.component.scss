@@ -1,0 +1,127 @@
+@import '../../../styles.scss';
+
+.example-container {
+  height: 100vh;
+}
+
+// .button_meter {
+//   height: auto;
+//   width: 94%;
+//   border: none;
+//   outline: none;
+//   padding: 10px 0px;
+//   color: #fff;
+//   border-radius: 10px;
+//   margin: 10px 10px;
+//   background: var(--secondary-color);
+//   box-shadow: -2px -2px 3px rgba(black, 0.5), 0 2px 3px rgba(black, 0.5);
+// }
+.button_meter{
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #838fd326;
+}
+.button_meter:hover {
+  // background: #4b341b;
+  opacity: 0.6;
+}
+
+.button_meter_active:hover {
+  // background: #4b341b;
+  opacity: 0.6;
+}
+
+.cursor:hover{
+   width:100%;
+   opacity: 0.6;
+
+}
+// .button_meter_active {
+//   height: auto;
+//   width: auto;
+//   border: none;
+//   outline: none;
+//   padding: 10px 20px;
+//   color: #fff;
+//   border-radius: 29px;
+//   margin: 10px 0px;
+//   width: 60%;
+//   background: #44616c 0% 0% no-repeat padding-box;
+//   box-shadow: -2px -2px 3px rgba(black, 0.5), 0 2px 3px rgba(black, 0.5);
+// }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+}
+
+mat-toolbar {
+  height: 64px;
+  background-color: var(--secondary-color);
+  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.5);
+
+  &.topbar {
+    padding: 0px 0px;
+    //   background: var(--background-color);
+  }
+
+  .navbar-header {
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+    .navbar-brand {
+      display: flex;
+      line-height: 18px;
+      align-items: center;
+
+      .dark-logo {
+        display: none;
+      }
+
+      b {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+// .text-white
+// {
+//   color: #fff;
+//   opacity: 0.7;
+// }
+.example-sidenav-container {
+  flex: 1;
+  width: 100vw;
+  height: calc(100vh - 64px);
+}
+
+.side-nav {
+  width: 16%;
+  background-color: var(--primary-color);
+  position: fixed;
+  z-index: 1;
+}
+
+html .page-wrapper {
+  height: calc(100vh - 25px);
+
+  .page-content {
+    padding: 30px 20px;
+    margin: 0 auto;
+  }
+
+  ;
+  width: 98vw;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+}

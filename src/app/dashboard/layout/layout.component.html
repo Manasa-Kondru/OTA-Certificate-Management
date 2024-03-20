@@ -1,0 +1,51 @@
+<div class="example-container">
+    <mat-toolbar class="topbar ">
+        <button mat-icon-button (click)="navbar.toggle()" *ngIf="!mobileQuery.matches" value="sidebarclosed">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div fxFlex>
+            <div class="m-auto pe-5 text-end " fxFlex>
+                <mat-icon class="logo" svgIcon='Bone-logo' style="overflow: visible;"></mat-icon>
+            </div>
+        </div>
+    </mat-toolbar>
+    <mat-sidenav-container class="example-sidenav-container">
+        <mat-sidenav #navbar class="side-nav" [mode]="mobileQuery.matches ? 'side' : 'over'"
+            [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches">
+            <div class="d-flex flex-column justify-content-between h-100">
+                <div class=" mt-2">
+                    <div class="text-center">
+                        <img [src]="getUrl()" class="rounded-circle  w-25 mt-5 " alt="Person Image"
+                            (error)="img.onerror=null;img.src=image" #img />
+                        <!-- <img src="../../../assets/svg/no profile.png" alt="" class="rounded-circle  w-25 mt-2 "> -->
+                    </div>
+                    <div class="text-center  px-1 py-3">
+                        <p class="mb-0 fs-5 text-white "><span>{{userinfo?.user_name | titlecase}}</span><br><div class="my-2">{{userinfo?.email}}</div></p>
+                    </div>
+                    <hr class="text-white">
+                </div>
+
+                <div class="d-flex flex-column align-items-start  h-50 my-5">
+                    <div [ngClass]="activeRoute=='overview'?'button_meter':''" (click)="routeTo('overview')"
+                        class="cursor my-2 py-3 fs-4 text-white" style="padding-left: 30px;width:100%">
+                        Overview</div>
+                    <div [ngClass]="activeRoute=='certificates'?'button_meter':''" (click)="routeTo('certificates')"
+                        class="cursor my-2 py-3 fs-4 text-white" style="padding-left: 30px;width:100%">Certificates</div>
+                    <div [ngClass]="activeRoute=='ota'?'button_meter':''" (click)="routeTo('ota')"
+                        class="cursor my-2 py-3 fs-4 text-white" style="padding-left: 30px;width:100%">OTA</div>
+                </div>
+                <hr class="text-white">
+                <div (click)="exitDashboard()" class="cursor mb-4  fs-4 text-white d-flex align-items-center"
+                    style="padding-left: 30px;width:100%">
+                    <mat-icon class="logo" svgIcon='logout'></mat-icon>
+                  <span class="px-3">  Logout</span>
+                </div>
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-content class="page-wrapper d-flex justify-content-center align-items-center">
+            <div class="page-content ">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

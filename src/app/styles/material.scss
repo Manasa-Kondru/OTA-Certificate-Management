@@ -1,0 +1,266 @@
+:host ::ng-deep .mat-error
+{
+color: red !important;
+}
+.table {
+    --bs-table-bg: transparent !important;
+    width: 96% !important;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-radius: 20px;
+  }
+
+  .custom-expansion-panel {
+    max-width: fit-content;
+    // border: 1px solid var(--primary-color);
+    border-radius: 10px;
+  }
+
+
+  @media (max-width: 960px) {
+    .table-response {
+      overflow-x: auto;
+      max-width: 100%;
+    }
+  }
+
+  .table-bordered-outside thead th {
+    border: 0.5px solid #AAAAAA !important;
+    background-color: transparent !important;
+
+  }
+
+  .table-bordered-outside tbody td {
+    border: 0.5px solid #AAAAAA !important;
+  }
+
+  .table tr:first-of-type th:first-of-type {
+    border-top-left-radius: 19px;
+
+  }
+
+  .table tr:first-of-type th:last-of-type {
+    border-top-right-radius: 19px;
+  }
+
+  .table tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 19px;
+  }
+
+  .table tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 19px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: grey;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 22px;
+  }
+
+ ::ng-deep table {
+    background-color: transparent;
+    text-align: center;
+    color: #000000;
+    white-space: nowrap;
+    overflow: scroll;
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  ::ng-deep td.mat-cell,
+  td.mat-footer-cell {
+    border-bottom-color: #AAAAAA;
+    border: 1px solid #AAAAAA;
+    color: #000000 !important;
+    font-size: 20px;
+  }
+
+  ::ng-deep th.mat-header-cell {
+    background: #E6E6E6 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: center;
+    color: #000000 !important;
+    border-bottom-width: 0 !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+  }
+
+  ::ng-deep table tr:first-child th:last-child {
+    border-top-right-radius: 16px;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  ::ng-deep table tr:first-child th:first-child {
+    border-top-left-radius: 16px;
+    padding: 0;
+    font-size: 20px;
+  }
+
+  ::ng-deep table td.mat-cell:first-of-type,
+  td.mat-cell:last-of-type {
+    padding: 0 !important;
+    font-size: 20px;
+  }
+
+  // =============================================================================
+
+  :host ::ng-deep .mat-paginator-container {
+    background-color: #E6E6E6 !important;
+  }
+
+  ::ng-deep .mat-paginator
+  {
+    font-family: Nunito, "Helvetica Neue", sans-serif !important;
+  }
+
+  :host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #AAAAAA !important;
+    border-radius: 2px solid #AAAAAA !important;
+  }
+
+  /* Font color */
+  :host ::ng-deep input.mat-input-element {
+    color: #636363 !important;
+    font-size: 18px !important;
+  }
+
+  :host ::ng-deep .mat-input-element {
+    caret-color: #636363 !important;
+  }
+
+  ::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: var(--primary-color) !important;
+    cursor: url('/assets/svg/Mouse_pointer.svg'), auto !important;
+    // font-size: 16px !important;
+  }
+
+  ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: #AAAAAA !important;
+  }
+
+  ::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: #AAAAAA !important;
+  }
+
+  // :host ::ng-deep input.mat-input-element,
+  // .mat-form-field.mat-form-field,
+  // .mat-form-field-label {
+  //     color: #fff !important;
+  // }
+  // :host ::ng-deep .mat-form-field-underline,
+  // .mat-form-field-ripple {
+  //     background-color: white !important;
+  // }
+  ::ng-deep .mat-select-arrow {
+    color: transparent !important;
+  }
+
+//   :host ::ng-deep .mat-toolbar {
+//     background-color: white !important;
+//     box-shadow: 0px 3px 3px #00000014 !important;
+//   }
+
+  ::ng-deep .mat-dialog-container
+  {
+  border-radius: 15px;
+  border: 0.5px solid var(--primary-color) !important;
+  }
+
+  // ========================================
+  ::ng-deep {
+    .mat-option-text {
+      color: black !important;
+    }
+
+    .mat-select-panel {
+      background-color: white !important;
+      border: 1px solid black !important;
+      width: 80px !important;
+    }
+
+    .mat-select {
+      font-family: Nunito !important;
+    }
+
+    .mat-form-field-underline {
+      // display: none;
+      cursor: url('/assets/svg/Mouse_pointer.svg'), auto !important;
+    }
+  }
+
+//   ::ng-deep .mat-tooltip {
+//     color: #000000 !important;
+//     font-family: Nunito !important;
+//     background-color: white !important;
+//     border-radius: 10px;
+//     border: 0.5px solid var(--primary-color) !important;
+//   }
+
+  ::ng-deep .mat-select-trigger {
+    cursor: url('/assets/svg/Mouse_pointer.svg'), auto !important;
+
+  }
+
+  ::ng-deep .mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
+    cursor: url('/assets/svg/Mouse_pointer.svg'), auto !important;
+  }
+
+  ::ng-deep .mat-button {
+    cursor: url('/assets/svg/Mouse_pointer.svg'), auto !important;
+  }
+
+  ::ng-deep .mat-step-header {
+    cursor: url('/assets/svg/Mouse_pointer.svg'), auto !important;
+
+  }
+
+  ::ng-deep .custom-file-input {
+    cursor: url('/assets/svg/Mouse_pointer.svg'), auto !important;
+  }
+
+  ::ng-deep .mat-checkbox-layout {
+    cursor: url('/assets/svg/Mouse_pointer.svg'), auto !important;
+
+  }
+
+  ::ng-deep .mat-checkbox{
+  font-family: Nunito !important;
+  }
+  ::ng-deep .mat-stepper-horizontal {
+    font-family: Nunito, "Helvetica Neue", sans-serif !important;
+  }
+  ::ng-deep input
+  {
+    font-family: Nunito, "Helvetica Neue", sans-serif !important;
+  }
+
+  ::ng-deep .mat-step-label
+  {
+    font-size: 18px !important;
+  }
+
+  // ::ng-deep .mat-menu-content
+  // {
+  //   border: 2px solid var(--primary-color) !important;
+  //   border-radius: 10px !important;
+  // }
+
+  .mat-form-field-appearance-outline .mat-form-field-flex
+  {
+    padding:1em 0.75em !important;
+  }

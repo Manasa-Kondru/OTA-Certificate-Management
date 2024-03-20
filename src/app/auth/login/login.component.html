@@ -1,0 +1,16 @@
+<div class="py-5 mb-5 ">
+  <p class="mb-5 fs-4 fw-bold py-3">Login</p>
+  <form [formGroup]="loginCrendentials">
+    <label style="margin-right:32% ;" class="fs-5">Enter E-mail address: </label><br>
+    <mat-form-field appearance="outline" class="w-50 py-3">
+      <!-- <mat-label class="fontsize ">E-mail address</mat-label> -->
+      <input matInput formControlName="email" placeholder="E-mail address">
+      <mat-error *ngIf="loginCrendentials.get('email')?.hasError('required')">
+        E-mail address is required
+      </mat-error>
+    </mat-form-field>
+  </form>
+  <div class="d-flex justify-content-center cursor my-3" (click)="routeTo()">
+    <div class="login  w-50 py-3 ">Login</div>
+  </div>
+</div>
